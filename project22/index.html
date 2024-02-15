@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            background-color: orange;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            padding: 4rem;
+        }
+        .box{
+            background-color: whitesmoke;
+            /* height: 70%; */
+            /* width: 25%; */
+            border-radius: 5px;
+            box-shadow: 0 0 7px;
+            display: grid;
+            grid-template-rows: repeat(9,1fr);
+            grid-template-columns: repeat(1,1fr);
+        }
+        .check{
+           display: flex;
+           gap: 1rem;
+           padding: 0.5rem;
+           border: 1px solid lightgrey;
+           justify-content: space-between;
+           align-items: center;
+        }
+        p{
+            border-left: 1px solid lightgrey;
+            padding: 0.6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="check">
+                <input type="checkbox" name="0" >
+                <label for="0" >This is an inbox layout</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" name="1">
+                <label for="1" >This is an inbox layout</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" name="2">
+                <label for="2" >This is an inbox layout</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" name="3">
+                <label for="3" >This is an inbox layout</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" name="4">
+                <label for="4" >This is an inbox layout</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" name="5">
+                <label for="5" >This is an inbox layout</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" name="6">
+                <label for="6" >This is an inbox layout</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" name="7">
+                <label for="7" >This is an inbox layout</label>
+            </div>
+            <div class="check">
+                <input type="checkbox" name="8">
+                <label for="8" >This is an inbox layout</label>
+            </div>
+        </div>
+    </div>
+    <script>
+        let check=document.querySelectorAll("input");
+        let label=document.querySelector("label");
+        
+        check.forEach(elem=>{
+            elem.addEventListener("click",handlecheck);
+        })
+        let firstcheck;
+        function handlecheck(e){
+            if(this.checked)
+            {
+                document.querySelector(`label[for="${this.name}"]`).style.textDecoration="line-through"
+            }
+          let inbetween=false;
+         
+            if(this.checked && e.shiftKey)
+            {
+                check.forEach(elem=>{
+                    console.log(elem)
+                  if(elem===this || elem===firstcheck)//this - here it is current element jiski vjh se if condition is executed
+                  {
+                    inbetween=!inbetween;
+                  }
+                  if(inbetween){
+                    elem.checked=true;
+                  }
+                })
+            }
+          
+            firstcheck=this;
+
+        }
+       
+        
+    </script>
+</body>
+</html>

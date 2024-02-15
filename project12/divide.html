@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="head"><h2>Math 4 Kids</h2></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html"  onclick="Add()" >ADD</a></li>
+                    <li><a href="subtract.html" onclick="Subtract()">SUBTRACT</a></li>
+                    <li><a href="multiply.html" onclick="Multiply()" >MULTIPLY</a></li>
+                    <li><a href="divide.html" onclick="Divide()" class="active">DIVIDE</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="grid-box">
+            <div id="content">
+                <span id="num1"></span>
+                <span id="sign"></span>
+                <span id="num2"></span>
+                <span id="equals"></span>
+                <span id="mark"></span>
+            </div>
+            <div id="box1" class="bclass"></div>
+            <div id="box2" class="bclass"></div>
+            <div id="box3" class="bclass"></div>
+        </div>
+    </div>
+    <script src="div.js"></script>
+</body>
+</html>

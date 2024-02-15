@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="flashcard">
+            <div class="form">
+                <h2>Create Flashcard</h2>
+                <label for="question">Question:</label>
+                <textarea  id="question" rows="20" cols="20"></textarea>
+                <label for="answer">Answer:</label>
+                <textarea  id="answer" rows="20" cols="20"></textarea>
+                <div class="buttons">
+                    <button  id="save" onclick="save()">SAVE</button><button id="clear" onclick="clear()">CLEAR</button>
+                </div>
+            </div>
+        </div>
+               
+        <div class="card-grid">
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

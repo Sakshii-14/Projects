@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+    <script>
+        let arr=[];
+        let str="sakshi";
+        document.addEventListener("keyup",toggle);
+        function toggle(e){
+            
+            arr.push(e.key);
+            arr.splice(-str.length-1,arr.length-str.length);
+            let a=arr.join('');
+            console.log(a)
+            if(a.includes('str'))
+            {  
+                console.log("yaaaay"); 
+            }
+        }
+    </script>
+</body>
+</html>

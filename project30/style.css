@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    background-color: gainsboro;
+}
+header{
+    background-image: url("image2.jpg");
+    height: 50vh;
+    background-size: cover;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:1.8rem ;
+    text-shadow: 0 0 8px gainsboro;
+    font-weight: 550;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+nav{
+    
+    width: 100%;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+ul{
+   
+    display: flex;
+    list-style: none;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 4rem;
+    
+}
+li{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    background-color: white;
+    max-width: 0;
+    overflow: hidden;
+    
+}
+li.logo a{
+    color: black;
+    font-weight: bold;
+}
+nav a{
+    text-decoration: none;
+    color:white;
+    padding: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+}
+.paras{
+    background-color: white;
+    width: 45%;
+    padding: 2rem;
+    text-align: justify;
+    margin: 5rem auto;
+    box-shadow: 0 0 10px grey;
+    border-radius: 2px;
+}
+.fixed-nav nav{
+    position: fixed;
+    top: 0;
+}
+.fixed-nav li.logo{
+    transition: all 0.3s;
+    max-width: 300px;
+}

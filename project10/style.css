@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(224, 224, 224);
+    overflow: scroll;
+}
+.flashcard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40%;
+
+}
+.form{
+   height: 70%;
+   width: 25%;
+   box-shadow: 0 0 10px gray;
+   background-color: lightgrey;
+   border-radius: 5px;
+   padding: 1rem;
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.buttons{
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    align-items: flex-start;
+    
+}
+#save{
+    padding: 0.4rem;
+}
+#clear{
+    padding: 0.4rem;
+}
+.card-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(auto-fit,1fr);
+    min-height: 80%;
+    gap: 10px;
+    padding: 10px;
+}
+.card{
+ background-color: whitesmoke;
+ box-shadow: 0 0 10px lightgrey;
+ padding: 1rem;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: stretch;
+ gap: 1rem;
+}
+
+.card-quest{
+    font-size: 1.4rem;
+    font-weight: 500;
+
+}
+.card-ans{
+    font-size: 1.3rem;
+    text-align: center;
+    color: rgb(231, 53, 53);
+    visibility: hidden;
+}

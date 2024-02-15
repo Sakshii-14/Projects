@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(236, 196, 120);
+    position: relative;
+}
+button{
+    position: absolute;
+    top:0 ;
+    left: 8%;
+    padding: 0.6rem;
+    background-color: rgb(3, 156, 3);
+    border: none;
+    color: white;
+    border-radius: 3px;
+
+}
+.gridbox{
+   height: 100vh;
+   width: 100vw;
+   display: flex;
+   justify-content: center;
+   padding: 2rem;
+   padding-top: 3rem;
+
+}
+.card-grid{
+   
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   grid-template-rows: repeat(autofit,1fr);
+   gap: 2rem;
+}
+.box{
+    max-height: 40%;
+    min-width: 60%;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 550;
+}
+.box:hover{
+    transform: scale(3);
+}
+
+.note{
+    position: fixed;
+    z-index: 1;
+    width: 25%;
+    height: 35%;
+    top: 35%;
+    left: 35%;
+}
+.content{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+textarea{
+    resize: none;
+    height: 100%;
+    width: 100%;
+    background-color:antiquewhite;
+    padding: 1.5rem;
+    padding-top: 2rem;
+    border-radius: 5px;
+}
+.icon{
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    color:rgb(193, 160, 117);
+    display: flex;
+    gap: 0.6rem;
+    margin: 0.5rem;
+    
+}
+.modal{
+    display: none;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="image"><img src="image1.jpg" id="image1"></div>
+            <div class="image"><img src="image2.jpg" id="image2"></div>
+            <div class="image"><img src="image3.jpg" id="image3"></div>
+            <div class="image"><img src="image4.jpg" id="image4"></div>
+            <div class="image"><img src="image5.jpg" id="image5"></div>
+            <div class="image"><img src="image6.jpg" id="image6"></div>
+            <a id="prev" onclick="Display(-1)">&#10094;</a>
+            <a id="next" onclick="Display(1)">&#10095;</a>
+        </div>
+        <div class="dotbox">
+            <div class="dots active"></div>
+            <div class="dots active"></div>
+            <div class="dots active"></div>
+            <div class="dots active"></div>
+            <div class="dots active"></div>
+            <div class="dots active"></div>
+        </div>
+    </div>
+    <script>
+      let index=0;
+      function Display(num){
+         index=index+num;
+        let images=document.getElementsByClassName("image");
+        let dots=document.getElementsByClassName("dots");
+        for(let i=0;i<images.length;i++)
+        {
+            images[i].style.display="none";
+            dots[i].className=dots[i].className.replace("active"," ");
+        }
+        if(index<0)
+         {
+            index=images.length-1;
+         }
+         if(index>images.length-1)
+         {
+            index=0;
+         }
+        images[index].style.display="block";
+        dots[index].className=dots[index].className+" active";
+
+      }
+      window.addEventListener("onload",Display(index));
+    </script>
+</body>
+</html>
